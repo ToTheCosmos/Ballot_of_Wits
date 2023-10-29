@@ -870,8 +870,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1900634582}
   lines:
-  - What did batman say to robin before they got in the car?
-  - Get in the car
+  - 'Announcer:
+
+    What a wonderful day for a debate! Today we have our 2 candidates,
+    Mr. Battaglia and Mr. Trades.'
+  - "Announcer: \nMr. Trades, what kind of policies do you plan to put in place?"
+  - 'Mr. Battaglia:
+
+    wedddjvhoinance POLITICAL CORRUPTION dajcchience'
+  - 'Mr. Battaglia:
+
+    adfvbjewjadcjiox TAX THE POOR ioneoiakln'
+  - 'Announcer:
+
+    ... I didn''t understand most of that, but I''m pretty sure
+    it wasn''t good.'
+  - 'Announcer:
+
+    Mr. Trades, your speech, please?'
   textSpeed: 0.1
 --- !u!114 &2065629004
 MonoBehaviour:
