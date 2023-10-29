@@ -12,7 +12,7 @@ public class ButtonFinder : MonoBehaviour
         // Add an onClick event listener to each button
         foreach (Button button in buttons)
         {
-            button.onClick.AddListener(() => OnButtonClicked(button));
+            //button.onClick.AddListener(() => OnButtonClicked(button));
         }
     }
 
