@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DynamicTextbox : MonoBehaviour
+public class InteractiveText : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     private string PlayerOption;
     public string InteractiveString = "-";
-    public GameObject PolicyButton;
 
     [TextArea(3, 10)]
     public string[] lines;
@@ -33,6 +32,11 @@ public class DynamicTextbox : MonoBehaviour
             {
                 NextLine();
             }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
         }
     }
 
@@ -52,7 +56,7 @@ public class DynamicTextbox : MonoBehaviour
         //Continue typing
         foreach (char c in lines[index].ToCharArray())
         {
-            if (Waiting == false)
+            if (Waiting==false)
             {
                 textComponent.text += c;
                 yield return new WaitForSeconds(textSpeed);
@@ -63,7 +67,7 @@ public class DynamicTextbox : MonoBehaviour
             }
             else
             {
-                PolicyButton.SetActive(true);
+                
             }
         }
     }
