@@ -6,11 +6,14 @@ public class ButtonFinder : MonoBehaviour
 {
     private void Start()
     {
-        Button[] buttons = FindObjectsOfType<Button>();
-
+        GameObject[] buttons = GameObject.FindGameObjectsWithTag(" Button");
+        foreach (GameObject i in buttons)
+        {
+            Debug.Log(i);
+        }
     }
 
-    private void OnButtonClicked(Button clickedButton)
+    private void OnButtonClicked(GameObject clickedButton)
     {
         Debug.Log(clickedButton);
     }

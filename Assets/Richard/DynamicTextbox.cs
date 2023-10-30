@@ -8,6 +8,7 @@ public class DynamicTextbox : MonoBehaviour
     public TextMeshProUGUI textComponent;
     private string PlayerOption;
     public string InteractiveString = "-";
+    public GameObject PolicyButton;
 
     [TextArea(3, 10)]
     public string[] lines;
@@ -62,7 +63,7 @@ public class DynamicTextbox : MonoBehaviour
             }
             else
             {
-
+                PolicyButton.SetActive(true);
             }
         }
     }
