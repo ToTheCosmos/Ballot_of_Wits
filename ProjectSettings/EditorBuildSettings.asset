@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Textbox_Test.unity
+    guid: 1407b4c33fd155047b131408395c6ede
   m_configObjects: {}
