@@ -271,8 +271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be5e6a75225e334d95cdc6791548149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
-  slideForce: 1
+  jumpForce: 12
+  slideForce: 3
   groundCheck: {fileID: 142669646}
   groundLayer:
     serializedVersion: 2
@@ -457,6 +457,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &686211338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3749336157794456306, guid: 5d64c2f4f6572674e9fb52d3e0dfbf37, type: 3}
+  m_PrefabInstance: {fileID: 3749336157403438323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &696731489
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 696731490}
   - component: {fileID: 696731491}
+  - component: {fileID: 696731492}
   m_Layer: 0
   m_Name: Poster
   m_TagString: Poster
@@ -482,7 +488,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696731489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.700077, y: 1.5255948, z: -4.5619593}
+  m_LocalPosition: {x: 17.27, y: 1.5255948, z: -4.5619593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -504,6 +510,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.501422, y: 2.8930402, z: 1.9362855}
   m_Center: {x: 1.2946887, y: -0.024294734, z: -1.0241382}
+--- !u!114 &696731492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696731489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222d8b5b0637d8b4ba0cb16eaa69d494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &731707552
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1989849712}
+  - component: {fileID: 1989849713}
   m_Layer: 0
   m_Name: EnemyAirSpawner
   m_TagString: Untagged
@@ -960,13 +979,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989849711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.03, y: 3.01, z: -5.37}
+  m_LocalPosition: {x: 18.73, y: 3.71, z: -5.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1989849713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989849711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a513c917c5fb344a55eeac9f51a3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeSeconds: 10
+  objectToSpawn: {fileID: 686211338}
 --- !u!1 &1999630432 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 243233285566065446, guid: 3b6238251c9023c4a99744f441e5bfbe, type: 3}
