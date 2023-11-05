@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PosterMove : MonoBehaviour
+public class PosterHit : MonoBehaviour
 {
-    public Rigidbody rb;
-    public float speed = 1f;
+    public Renderer m_Renderer;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +15,9 @@ public class PosterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = transform.forward * speed;
+        if (!m_Renderer.isVisible)
+        {
+            m_Renderer.material.color = Color.green;
+        }
     }
 }
