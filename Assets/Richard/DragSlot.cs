@@ -7,6 +7,7 @@ public class DragSlot : MonoBehaviour
     public int CorrectAnswer;
     public TestingDrag draggedObject;
     public int Score;
+    public ScoreTracking scoreupdater;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class DragSlot : MonoBehaviour
             }
             if (draggedObject != null)
             {
+                scoreupdater.UpdateScore();
                 CorrectAnswer += 1;
                 this.gameObject.SetActive(false);
             }
