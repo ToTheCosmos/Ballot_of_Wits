@@ -8,6 +8,8 @@ public class TestingDrag : MonoBehaviour
     private Vector3 mOffset;
     private Vector3 initialCoord;
     private bool inTrigger = false;
+    public GameObject dragslot;
+    public int Answer;
 
     private void Start()
     {
@@ -41,6 +43,10 @@ public class TestingDrag : MonoBehaviour
         if (inTrigger==false)
         {
             gameObject.transform.position = initialCoord;
+        }
+        else
+        {
+            Destroy(this.gameObject);
         }
     }
 

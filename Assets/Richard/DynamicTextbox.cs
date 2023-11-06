@@ -7,13 +7,12 @@ public class DynamicTextbox : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     private string PlayerOption;
-    public string InteractiveString = "-";
-    public GameObject PolicyButton;
+    public string pause = "-";
+    public GameObject dragslot;
 
     [TextArea(3, 10)]
     public string[] lines;
     public float textSpeed;
-    public bool Waiting = false;
 
     private int index;
 
@@ -52,18 +51,14 @@ public class DynamicTextbox : MonoBehaviour
         //Continue typing
         foreach (char c in lines[index].ToCharArray())
         {
-            if (Waiting == false)
+            if (dragslot.active == false)
             {
                 textComponent.text += c;
                 yield return new WaitForSeconds(textSpeed);
-                if (c == InteractiveString[0])
+                if(c==pause[0])
                 {
-                    Waiting = true;
+                    dragslot.SetActive(true);
                 }
-            }
-            else
-            {
-                PolicyButton.SetActive(true);
             }
         }
     }
@@ -71,7 +66,7 @@ public class DynamicTextbox : MonoBehaviour
     void NextLine()
     {
         //Moves to next line
-        if (index < lines.Length - 1)
+        if ((index < lines.Length - 1) & (dragslot.active==false))
         {
             index++;
             textComponent.text = string.Empty;
@@ -79,7 +74,6 @@ public class DynamicTextbox : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
         }
     }
 }
