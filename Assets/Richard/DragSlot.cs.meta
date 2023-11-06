@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Richard/DragSlot.cs.meta
 guid: 61b2ce40a65525e4a89d38b905f67d55
+========
+guid: 876b3ee31e28e8a4e90ca97eb1ccf0a2
+>>>>>>>> Richard:Assets/TimerForNext.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

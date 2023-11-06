@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Matt/ScoreTracking.cs.meta
 guid: e37c1dcd1ddb39d4381f6955c6518cff
+========
+guid: 990b9d5786cc7d94bb53d92895698b1d
+>>>>>>>> Richard:Assets/PosterHit.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
