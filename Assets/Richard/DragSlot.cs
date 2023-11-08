@@ -16,13 +16,13 @@ public class DragSlot : MonoBehaviour
         {
             if (draggedObject.Answer == CorrectAnswer)
             {
-                Score += 1;
+                Score += draggedObject.AnswerWorth;
                 Debug.Log(Score);
             }
             if (draggedObject != null)
             {
                 scoreupdater.UpdateScore();
-                CorrectAnswer += draggedObject.AnswerWorth;
+                CorrectAnswer += 1;
                 this.gameObject.SetActive(false);
             }
         }

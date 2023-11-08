@@ -947,7 +947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragslot: {fileID: 1887441592}
   Answer: 4
-  AnswerWorth: 0
+  AnswerWorth: 1
 --- !u!1 &583330936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragslot: {fileID: 1887441592}
   Answer: 1
-  AnswerWorth: 0
+  AnswerWorth: 2
 --- !u!65 &1356976465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2403,7 +2403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragslot: {fileID: 1887441592}
   Answer: 2
-  AnswerWorth: 0
+  AnswerWorth: 3
 --- !u!65 &1804254120
 BoxCollider:
   m_ObjectHideFlags: 0
