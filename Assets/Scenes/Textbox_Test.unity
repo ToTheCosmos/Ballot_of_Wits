@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 123692807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1586043094}
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -232, y: 58}
+  m_AnchoredPosition: {x: -231, y: 61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &123692809
@@ -2954,7 +2954,7 @@ MonoBehaviour:
   - "Announcer: \nHello everyone, and welcome to this year's presidental election."
   - 'Announcer:
 
-    This year we have Mr. Chris P. Dollor and Mrs. Good E. Tooshus'
+    This year we have Mr. Chris P. Dollor and Mrs. Good E. Tooshus.'
   - 'Announcer:
 
     Mr. Dollor, would you be willing to give us your stance on the
@@ -3064,8 +3064,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
