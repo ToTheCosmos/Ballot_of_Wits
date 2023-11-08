@@ -9,10 +9,6 @@ public class DragSlot : MonoBehaviour
     public int Score;
     public ScoreTracking scoreupdater;
     // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +22,7 @@ public class DragSlot : MonoBehaviour
             if (draggedObject != null)
             {
                 scoreupdater.UpdateScore();
-                CorrectAnswer += 1;
+                CorrectAnswer += draggedObject.AnswerWorth;
                 this.gameObject.SetActive(false);
             }
         }
@@ -40,9 +36,5 @@ public class DragSlot : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         draggedObject = null;
-    }
-
-    private void OnMouseUp()
-    {
     }
 }

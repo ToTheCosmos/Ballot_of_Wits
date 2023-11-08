@@ -10,6 +10,7 @@ public class TestingDrag : MonoBehaviour
     private bool inTrigger = false;
     public GameObject dragslot;
     public int Answer;
+    public int AnswerWorth;
 
     private void Start()
     {
