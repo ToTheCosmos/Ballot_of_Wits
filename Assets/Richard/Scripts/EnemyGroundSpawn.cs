@@ -42,6 +42,6 @@ public class EnemyGroundSpawn : MonoBehaviour
     void SpawnObject()
     {
         GameObject newObject = Instantiate(objectToSpawn);
-        newObject.transform.position = new Vector3(12.64f, 0.76f, -5.37f);
+        newObject.transform.position = new Vector3(11f, 2.5f, -5.62f);
     }
 }

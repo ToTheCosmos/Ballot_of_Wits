@@ -42,6 +42,6 @@ public class EnemyAirSpawn : MonoBehaviour
     void SpawnObject()
     {
         GameObject newObject = Instantiate(objectToSpawn);
-        newObject.transform.localPosition = new Vector3(12.67f, 3.71f, -5.62f);
+        newObject.transform.localPosition = new Vector3(12.67f, 6.48f, -5.81f);
     }
 }
