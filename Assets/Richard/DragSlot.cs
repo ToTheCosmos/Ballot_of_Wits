@@ -8,6 +8,9 @@ public class DragSlot : MonoBehaviour
     public TestingDrag draggedObject;
     public int Score;
     public ScoreTracking scoreupdater;
+    public List<GameObject> AnswerCategories;
+    private int listIndex = 0;
+    public int TotalAnswers;
     // Start is called before the first frame update
     // Update is called once per frame
     void Update()
@@ -23,6 +26,14 @@ public class DragSlot : MonoBehaviour
             {
                 scoreupdater.UpdateScore();
                 CorrectAnswer += 1;
+                TotalAnswers += 2;
+                if (CorrectAnswer > 2)
+                {
+                    AnswerCategories[listIndex].SetActive(false);
+                    listIndex += 1;
+                    AnswerCategories[listIndex].SetActive(true);
+                    CorrectAnswer = 1;
+                }
                 this.gameObject.SetActive(false);
             }
         }

@@ -11,6 +11,6 @@ public class ScoreTracking : MonoBehaviour
     public void UpdateScore()
     {
         TextMeshProUGUI scoretext = this.GetComponent<TextMeshProUGUI>();
-        scoretext.text = "Audience Approval: " + scoretracker.Score + "/" + (scoretracker.CorrectAnswer);
+        scoretext.text = "Audience Approval: " + scoretracker.Score + "/" + (scoretracker.TotalAnswers);
     }
 }
