@@ -20,9 +20,13 @@ public class PlayerControl : MonoBehaviour
     private bool isGrounded;
     private float groundCheckRadius = 0.2f;
 
+    public Animator anim;
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim.Play("Running");
     }
 
     private void Update()
@@ -40,11 +44,13 @@ public class PlayerControl : MonoBehaviour
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            anim.Play("Jump");
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0f)
         {
             rb.AddForce(Vector3.down * slideForce, ForceMode.Impulse);
+            anim.Play("Running");
         }
     }
 
@@ -75,6 +81,7 @@ public class PlayerControl : MonoBehaviour
             Debug.Log("Within Range");
             if (Input.GetKey(KeyCode.W))
             {
+                anim.Play("PosterHit");
                 Debug.Log("Put up poster");
                 other.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
             }
