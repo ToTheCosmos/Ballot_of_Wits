@@ -22,6 +22,7 @@ public class PlayerControl : MonoBehaviour
 
     public Animator anim;
 
+    public Material Material1;
 
     private void Start()
     {
@@ -83,7 +84,7 @@ public class PlayerControl : MonoBehaviour
             {
                 anim.Play("PosterHit");
                 Debug.Log("Put up poster");
-                other.GetComponentInChildren<MeshRenderer>().material.color = Color.yellow;
+                other.GetComponentInChildren<MeshRenderer>().material = Material1;
             }
         }
     }

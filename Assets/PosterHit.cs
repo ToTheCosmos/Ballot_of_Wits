@@ -5,6 +5,7 @@ using UnityEngine;
 public class PosterHit : MonoBehaviour
 {
     public Renderer m_Renderer;
+    public Material m_Material;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,8 @@ public class PosterHit : MonoBehaviour
     {
         if (!m_Renderer.isVisible)
         {
-            m_Renderer.material.color = Color.green;
+            m_Renderer.material.color = Color.white;
+            m_Renderer.material = m_Material;
         }
     }
 }
