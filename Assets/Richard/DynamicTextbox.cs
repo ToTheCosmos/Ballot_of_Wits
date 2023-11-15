@@ -66,7 +66,7 @@ public class DynamicTextbox : MonoBehaviour
     void NextLine()
     {
         //Moves to next line
-        if ((index < lines.Length) & (dragslot.active==false))
+        if ((index < lines.Length-1) & (dragslot.active==false))
         {
             index++;
             textComponent.text = string.Empty;

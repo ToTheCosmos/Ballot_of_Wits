@@ -11,6 +11,13 @@ public class ScoreTracking : MonoBehaviour
     public void UpdateScore()
     {
         TextMeshProUGUI scoretext = this.GetComponent<TextMeshProUGUI>();
-        scoretext.text = "Electoral Votes: " + scoretracker.Score + "/" + "538. " + (538-scoretracker.Score) + " more needed for a majority!";
+        if (scoretracker.Score < 270)
+        {
+            scoretext.text = "Electoral Votes: " + scoretracker.Score + "/" + "538. " + (270 - scoretracker.Score) + " more needed for a majority!";
+        }
+        else
+        {
+            scoretext.text = "Electoral Votes: " + scoretracker.Score + "/" + "538. Majority Reached!";
+        }
     }
 }
