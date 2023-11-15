@@ -9,12 +9,24 @@ public class DynamicTextbox : MonoBehaviour
     private string PlayerOption;
     public string pause = "-";
     public GameObject dragslot;
+    public List<GameObject> PaulHands;
+    public List<GameObject> JackyHands;
+    public int PaulIndex = 0;
+    public int JackyIndex = 0;
+    public GameObject Paul;
+    public GameObject Jacky;
+    float height = 0.5f;
+    float speed = 5f;
+    public DragSlot scoretracker;
+    public GameObject JackyWin;
+    public GameObject PaulWin;
 
     [TextArea(3, 10)]
     public string[] lines;
     public float textSpeed;
 
     private int index;
+    private string talking;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +38,7 @@ public class DynamicTextbox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        talking = lines[index+1];
         if (Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
@@ -61,6 +74,7 @@ public class DynamicTextbox : MonoBehaviour
                 }
             }
         }
+
     }
 
     void NextLine()
@@ -71,9 +85,47 @@ public class DynamicTextbox : MonoBehaviour
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
+            if (talking[0].ToString() == "P")
+            {
+                PaulHands[PaulIndex].SetActive(false);
+                PaulIndex += 1;
+                if (PaulIndex > 3)
+                {
+                    PaulIndex = 0;
+                }
+                PaulHands[PaulIndex].SetActive(true);
+            }
+            else if (talking[0].ToString() == "J")
+            {
+                JackyHands[JackyIndex].SetActive(false);
+                JackyIndex += 1;
+                if (JackyIndex > 3)
+                {
+                    JackyIndex = 0;
+                }
+                JackyHands[JackyIndex].SetActive(true);
+            }
+            else
+            {
+                JackyHands[JackyIndex].SetActive(false);
+                PaulHands[PaulIndex].SetActive(false);
+                JackyIndex = 0;
+                PaulIndex = 0;
+                JackyHands[JackyIndex].SetActive(true);
+                PaulHands[PaulIndex].SetActive(true);
+
+            }
         }
-        else
+        if (index >= lines.Length-1)
         {
+            if (scoretracker.Score >= 270)
+            {
+                JackyWin.SetActive(true);
+            }
+            else
+            {
+                PaulWin.SetActive(true);
+            }
         }
     }
 }

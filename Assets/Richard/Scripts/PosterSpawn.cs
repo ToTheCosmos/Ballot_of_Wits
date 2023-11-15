@@ -39,6 +39,6 @@ public class PosterSpawn : MonoBehaviour
     void SpawnObject()
     {
         GameObject newObject = Instantiate(objectToSpawn);
-        newObject.transform.localPosition = new Vector3(17.5959f, 2.97f, -6.880136f);
+        newObject.transform.localPosition = new Vector3(24.37f, 2.97f, -6.880136f);
     }
 }
