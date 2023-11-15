@@ -6,6 +6,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class PlayerControl : MonoBehaviour
     public Animator anim;
 
     public Material Material1;
+
+    public Text text;
+    public static int scoreCount;
 
     private void Start()
     {
@@ -53,6 +58,12 @@ public class PlayerControl : MonoBehaviour
             rb.AddForce(Vector3.down * slideForce, ForceMode.Impulse);
             anim.Play("Running");
         }
+
+        if (scoreCount < 0)
+        {
+            scoreCount = 0;
+            text.text = scoreCount.ToString();
+        }
     }
 
     private void FixedUpdate()
@@ -68,7 +79,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            Debug.Log("Hit");
+            scoreCount = scoreCount - 300;
+            text.text = scoreCount.ToString();
             rb.velocity = Vector3.zero;
             rb.AddForce(Vector3.up * hitVelocity, ForceMode.Impulse);
         }
@@ -82,8 +94,9 @@ public class PlayerControl : MonoBehaviour
             Debug.Log("Within Range");
             if (Input.GetKey(KeyCode.W))
             {
+                scoreCount = scoreCount + 100;
+                text.text = scoreCount.ToString();
                 anim.Play("PosterHit");
-                Debug.Log("Put up poster");
                 other.GetComponentInChildren<MeshRenderer>().material = Material1;
             }
         }
