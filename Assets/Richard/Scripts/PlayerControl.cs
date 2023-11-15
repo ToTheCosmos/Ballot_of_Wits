@@ -69,7 +69,7 @@ public class PlayerControl : MonoBehaviour
     private void FixedUpdate()
     {
         // Apply downward force when player hits "S"
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && !isGrounded)
         {
             rb.AddForce(Vector3.down * slideForce, ForceMode.Impulse);
         }
